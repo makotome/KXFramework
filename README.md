@@ -1,5 +1,4 @@
-
-![KXFramework](https://github.com/mr-kelly/KXFramework/blob/master/Docs/KXFramework-logo.png)
+首先非常感谢KEngine/KXFramework和xLua作者提供的架构。我们会在现在基础上继续完善KXFramework。比如：通讯模块、更新模块等等。
 
 [**K**Engine](https://github.com/mr-kelly/KEngine) + [**X**Lua](https://github.com/Tencent/xLua)+ **Framework** = KXFramework
 
@@ -13,8 +12,10 @@
 
 
 
-我使用的UnityEditorVersion: 5.6.6p2
+我使用的UnityEditorVersion: 5.6.3p2
 
 
 
 在使用过程中遇到或者发现错误，欢迎pull 和issues，共同维护KXFramework。
+
+
