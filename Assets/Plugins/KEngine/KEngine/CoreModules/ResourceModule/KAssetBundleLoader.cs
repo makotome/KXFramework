@@ -76,7 +76,7 @@ namespace KEngine
             LoaderMode loaderMode = LoaderMode.Async)
         {
 
-#if UNITY_5
+#if UNITY_5 || UNITY_2017_1_OR_NEWER
             url = url.ToLower();
 #endif
             LoaderDelgate newCallback = null;
@@ -90,16 +90,17 @@ namespace KEngine
             return newLoader;
         }
 
-#if UNITY_5
+#if UNITY_5 || UNITY_2017_1_OR_NEWER
         private static bool _hasPreloadAssetBundleManifest = false;
         private static AssetBundle _mainAssetBundle;
         private static AssetBundleManifest _assetBundleManifest;
         /// <summary>
         /// Unity5下，使用manifest进行AssetBundle的加载
+        /// bool isForce,在热更新后，可能需要强制刷新AssetBundleManifest。
         /// </summary>
-        static void PreLoadManifest()
+        public static void PreLoadManifest(bool isForce = false)
         {
-            if (_hasPreloadAssetBundleManifest)
+            if (_hasPreloadAssetBundleManifest && isForce == false)
                 return;
 
             _hasPreloadAssetBundleManifest = true;
@@ -116,7 +117,7 @@ namespace KEngine
 
         protected override void Init(string url, params object[] args)
         {
-#if UNITY_5
+#if UNITY_5 || UNITY_2017_1_OR_NEWER
             PreLoadManifest();
 #endif
 
@@ -132,7 +133,7 @@ namespace KEngine
             KResourceModule.Instance.StartCoroutine(LoadAssetBundle(url));
         }
 
-#if UNITY_5
+#if UNITY_5 || UNITY_2017_1_OR_NEWER
         /// <summary>
         /// 依赖的AssetBundleLoader
         /// </summary>
@@ -141,7 +142,7 @@ namespace KEngine
 
         private IEnumerator LoadAssetBundle(string relativeUrl)
         {
-#if UNITY_5
+#if UNITY_5 || UNITY_2017_1_OR_NEWER
             // Unity 5下，自动进行依赖加载
             var abPath = relativeUrl.ToLower();
             var deps = _assetBundleManifest.GetAllDependencies(abPath);
@@ -161,7 +162,7 @@ namespace KEngine
             }
 #endif
 
-#if UNITY_5
+#if UNITY_5 || UNITY_2017_1_OR_NEWER
             // Unity 5 AssetBundle自动转小写
             relativeUrl = relativeUrl.ToLower();
 #endif
@@ -226,7 +227,7 @@ namespace KEngine
 
             if (BundleParser != null)
                 BundleParser.Dispose(false);
-#if UNITY_5
+#if UNITY_5 || UNITY_2017_1_OR_NEWER
             foreach (var depLoader in _depLoaders)
             {
                 depLoader.Release();
