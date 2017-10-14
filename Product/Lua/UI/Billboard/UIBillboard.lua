@@ -1,6 +1,6 @@
 local UIBase = import("UI/UIBase")
 --if not Cookie then
---    Cookie = Slua.GetClass('KXFramework.Cookie')
+--    Cookie = Slua.GetClass('KSFramework.Cookie')
 --end
 
 local UIBillboard = {}

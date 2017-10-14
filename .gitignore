@@ -34,3 +34,4 @@ sysinfo.txt
 *.unitypackage
 Assets/StreamingAssets
 Product/Bundles
+settings.json

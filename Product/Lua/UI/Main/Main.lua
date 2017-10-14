@@ -1,11 +1,11 @@
 local UIBase = import("UI/UIBase")
 
 if not Cookie then
-    Cookie = CS.KXFramework.Cookie
+    Cookie = CS.KSFramework.Cookie
 end
 
 if not I18N then
-    I18N = CS.KXFramework.I18N -- use slua reflection mode
+    I18N = CS.KSFramework.I18N -- use slua reflection mode
 end
 
 if not Log then

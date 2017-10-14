@@ -1,12 +1,12 @@
-﻿#if UNITY_5
+﻿#if UNITY_5 || UNITY_2017_1_OR_NEWER
 using System.IO;
 using KEngine;
-using KXFramework;
+using KSFramework;
 using UnityEngine;
 using UnityEditor;
 using NUnit.Framework;
 
-public class KXFrameworkTests
+public class KSFrameworkTests
 {
     private static LuaModule _testLuaModule;
     public static LuaModule GetLuaModule()

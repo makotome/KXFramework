@@ -1,11 +1,11 @@
 local UIBase = import("UI/UIBase")
 
 if not Cookie then
-    Cookie = CS.KXFramework.Cookie --Slua.GetClass('KXFramework.Cookie')
+    Cookie = CS.KSFramework.Cookie --Slua.GetClass('KSFramework.Cookie')
 end
 
 if not I18N then
-    I18N = CS.KXFramework.I18N -- use slua reflection mode
+    I18N = CS.KSFramework.I18N -- use slua reflection mode
 end
 
 if not UIModule then
@@ -66,7 +66,7 @@ function UILogin:OnInit(controller)
     --end
 
     -- test LuaBehaivour
-    if not LuaBehaviour then LuaBehaviour = CS.KXFramework.LuaBehaviour end
+    if not LuaBehaviour then LuaBehaviour = CS.KSFramework.LuaBehaviour end
     LuaBehaviour.Create(controller.CachedGameObject, 'Behaviour/TestLuaBehaviour')
 end
 

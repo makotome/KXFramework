@@ -2,7 +2,7 @@
 -- global variables / functions
 
 function import(filename)
-    return CS.KXFramework.LuaModule.Instance:Import(filename)
+    return CS.KSFramework.LuaModule.Instance:Import(filename)
 
 end
 

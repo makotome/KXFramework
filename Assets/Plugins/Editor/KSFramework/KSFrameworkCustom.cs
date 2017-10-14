@@ -30,12 +30,12 @@ using KEngine.Editor;
 using UnityEditor;
 
 /// <summary>
-/// 可以对KXFramework的部分静态编辑器类，进行自定义代码设置
+/// 可以对KSFramework的部分静态编辑器类，进行自定义代码设置
 /// </summary>
 [InitializeOnLoad]
-public class KXFrameworkCustom
+public class KSFrameworkCustom
 {
-    static KXFrameworkCustom()
+    static KSFrameworkCustom()
     {
         // 定义配置表条件编译变量
         //SettingModuleEditor.CompileSettingConditionVars = new[] {"I18N_ZH_CN"};

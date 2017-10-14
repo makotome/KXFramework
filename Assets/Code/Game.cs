@@ -31,7 +31,7 @@ using System.Runtime.InteropServices;
 using AppSettings;
 using KEngine;
 using KEngine.UI;
-using KXFramework;
+using KSFramework;
 
 public class Game : KSGame
 {

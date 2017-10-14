@@ -5,9 +5,9 @@ IsEditorLoadAsset = 0
 
 ; Override default "UGUIBridge"
 [KEngine.UI]
-UIModuleBridge = KXFramework.UGUISLuaBridge
+UIModuleBridge = KSFramework.UGUISLuaBridge
 
-[KXFramework.I18N]
+[KSFramework.I18N]
 
 ;first as default
 I18NLanguages = zh_CN,en_US
@@ -16,6 +16,6 @@ I18NLanguages = zh_CN,en_US
 I18N = en_US
 
 
-[KXFramework.Lua]
+[KSFramework.Lua]
 ; a path relative to product path
 LuaPath = Lua

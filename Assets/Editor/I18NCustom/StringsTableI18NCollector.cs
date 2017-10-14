@@ -31,7 +31,7 @@ using KEngine;
 using UnityEngine;
 using TableML;
 
-namespace KXFramework.Editor
+namespace KSFramework.Editor
 {
     /// <summary>
     /// default collector, 收集StringsTable.xlsx编译后的表StringsTable.bytes的多语言字符串

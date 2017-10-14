@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using System.IO;
 using KUnityEditorTools;
 using UnityEditor;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace KEngine.Editor
@@ -165,10 +164,14 @@ namespace KEngine.Editor
         //	PerformBuild(GetProjectName() + "X86.exe", BuildTarget.StandaloneWindows, BuildOptions.AllowDebugging | BuildOptions.ConnectWithProfiler);
         //}
 
-        [MenuItem("KEngine/AutoBuilder/iOS")]
         public static void PerformiOSBuild()
         {
-            PerformiOSBuild("App");
+            PerformiOSBuild("App", false);
+        }
+        [MenuItem("KEngine/AutoBuilder/iOS")]
+        public static void PerformiOSBuildDevelopment()
+        {
+            PerformiOSBuild("App", true);
         }
 
         public static string PerformiOSBuild(string ipaName, bool isDevelopment = true)
@@ -183,10 +186,19 @@ namespace KEngine.Editor
 #endif
         }
 
-        [MenuItem("KEngine/AutoBuilder/Android")]
         public static void PerformAndroidBuild()
         {
-            PerformAndroidBuild("StrikeHero");
+            PerformAndroidBuild("App", false);
+        }
+
+        [MenuItem("KEngine/AutoBuilder/Android")]
+        public static void PerformAndroidBuildDevelopment()
+        {
+
+            EditorPrefs.SetString("AndroidSdkRoot", "C:\\android-sdk-windows");
+            Debug.LogWarning("SDK Path: " + EditorPrefs.GetString("AndroidSdkRoot"));
+
+            PerformAndroidBuild("App", true);
         }
 
         public static string PerformAndroidBuild(string apkName, bool isDevelopment = true)
@@ -223,19 +235,6 @@ namespace KEngine.Editor
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
             BuildTools.ShowDialog("Prefs Cleared!");
-        }
-
-        [MenuItem("KEngine/UI(UGUI)/Export All UI")]
-        public static void ExportAllUI()
-        {
-            var uiPath = Application.dataPath + "/" + KEngineDef.ResourcesEditDir + "/UI";
-            var uiScenes = Directory.GetFiles(uiPath, "*.unity", SearchOption.AllDirectories);
-            foreach (string uiScene in uiScenes)
-            {
-                Log.Info("begin export {0}",uiScene);
-                KUGUIBuilder.UISceneToPrefabs();
-                EditorSceneManager.OpenScene(uiScene);
-            }
         }
     }
 
