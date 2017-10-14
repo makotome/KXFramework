@@ -1,9 +1,9 @@
 
 ![KXFramework](https://github.com/panshengneng/KXFramework/blob/master/KXFramework-logo.png)
 
-[**K**Engine](https://github.com/mr-kelly/KEngine) + [**X**Lua](https://github.com/Tencent/xLua)+ **KSFramework** = KXFramework
+[**K**Engine](https://github.com/mr-kelly/KEngine) + [**X**Lua](https://github.com/Tencent/xLua) + [**KSFramework**](https://github.com/mr-kelly/KSFramework) = [**KXFramework**](https://github.com/panshengneng/KXFramework)
 
-本仓库在 [KSFramework](https://github.com/mr-kelly/KSFramework) 的xlua分支基础上，整合好KEngine和XLua，开箱即可使用，简化流程。
+本仓库在 [KSFramework](https://github.com/mr-kelly/KSFramework) 的[**X**Lua](https://github.com/Tencent/xLua)分支基础上，整合好[**K**Engine](https://github.com/mr-kelly/KEngine)和[**X**Lua](https://github.com/Tencent/xLua)，开箱即可使用，简化流程。
 
 
 
@@ -14,10 +14,26 @@
 
 
 经过测试的Unity版本：
-
 UnityEditorVersion  5.3.7p4
-
+UnityEditorVersion  5.6.3p2
 UnityEditorVersion  2017.1.1p2
+
+经过测试的macOs版本：
+macOS Sierra 10.12.6
+
+
+经过测试的IOS版本：
+iPhone8 Plus 11.0.3
+
+经过测试的Android版本：
+XiaoMi 5 MIUI 9 Global 7.10.12 | 开发版
+Android version 7.0 NRD90M
+
+开发软件版本:
+Xcode Version 9.0
+Android Studio 2.3.3
+
+
 
 
 
