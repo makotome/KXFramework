@@ -5,7 +5,7 @@ using System.Collections.Generic;
 // [TIPS] : JsonDotNet download URL : http://www.parentelement.com/assets/json_net_unity
 // [TIPS] : SimpleJson download URL : https://github.com/facebook-csharp-sdk/simple-json/tree/master/src/SimpleJson
 
-namespace KEngine.Component.Json
+namespace KEngine.Lib
 {
     public class KJsonManager : MonoBehaviour
     {
