@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KJsonManager : MonoBehaviour {
+public class IKEncryptionManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
